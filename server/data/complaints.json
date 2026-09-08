@@ -1,0 +1,655 @@
+[
+  {
+    "id": "CMP-2026-8941",
+    "firNumber": "FIR/CYB/2026/0842",
+    "timestamp": "2026-09-08T18:45:00Z",
+    "victim": {
+      "name": "Sunita Sharma",
+      "phone": "+91 98112 XXXXX",
+      "city": "Noida, UP",
+      "bank": "HDFC Bank",
+      "accountNumber": "50100XXXX7841",
+      "ifsc": "HDFC0001202"
+    },
+    "amount": 485000,
+    "fraudType": "Digital Arrest / Police Impersonation",
+    "priority": "CRITICAL",
+    "status": "Pending Analysis",
+    "reportedStation": "Cyber Crime Police Station, Sector 108, Noida",
+    "summary": "Victim was coerced under fake CBI video interrogation threatening non-bailable warrant, forced to liquidate fixed deposits and transfer funds via RTGS.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "Valid RBI NEFT clearing database match for HDFC Bank Sector 62", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "Unique transaction UTR: CMS8921049281. No prior duplicate FIR registered", "badge": "Success" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Account holder PAN registered to shell firm 'Aakash Infotech Enterprises'", "badge": "Flagged" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "IP address hop originated in Mewat/Nuh corridor, device IMEI active", "badge": "Critical Alert" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Sunita S. (Victim)", "role": "Victim Source", "bank": "HDFC Bank", "acc": "XXXX-7841", "risk": 5, "city": "Noida" },
+        { "id": "M1", "label": "Aakash K. (Mule L1)", "role": "Layer 1 Mule", "bank": "ICICI Bank", "acc": "XXXX-3109", "risk": 74, "city": "Noida Sec 18" },
+        { "id": "M2", "label": "Radhey Trd. (Mule L2)", "role": "Layer 2 Aggregator", "bank": "Canara Bank", "acc": "XXXX-9921", "risk": 91, "city": "Noida Sec 27" },
+        { "id": "M3", "label": "Target Cash-Out ATM", "role": "Physical Cash Extraction", "bank": "SBI ATM Vestibule", "acc": "Cash Card Pull", "risk": 98, "city": "Noida Sec 18" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 485000, "time": "18:48:12", "type": "RTGS", "txId": "RTGS-092810" },
+        { "source": "M1", "target": "M2", "amount": 450000, "time": "19:05:40", "type": "IMPS", "txId": "IMPS-391024" },
+        { "source": "M2", "target": "M3", "amount": 400000, "time": "19:22:15", "type": "ATM Pull Scheduled", "txId": "PENDING-WITHDRAWAL" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "SBI ATM - Sector 18 Market Complex",
+        "bank": "State Bank of India",
+        "address": "Plot 12, Pocket B, Sector 18, Noida, UP 201301",
+        "lat": 28.5708,
+        "lng": 77.3218,
+        "confidence": 89,
+        "riskLevel": "HIGH",
+        "window": "Next 2 - 4 hours (22:30 - 00:30)",
+        "historicalWithdrawals": 17,
+        "nearestUnit": "Sector 20 Cyber Crime Quick Response Team (1.2 km away)",
+        "rationale": "Matches primary cash-out cluster for Mule L2 SIM geofence and past 5 cyber extortion withdrawals in NCR."
+      },
+      {
+        "rank": 2,
+        "locationName": "Punjab National Bank ATM - Atta Market",
+        "bank": "Punjab National Bank",
+        "address": "Atta Market, Sector 27, Noida, UP 201301",
+        "lat": 28.5742,
+        "lng": 77.3265,
+        "confidence": 74,
+        "riskLevel": "MEDIUM",
+        "window": "Next 3 - 5 hours",
+        "historicalWithdrawals": 9,
+        "nearestUnit": "Sector 20 PCR Mobile Van 4 (0.8 km away)",
+        "rationale": "Secondary commercial ATM cluster with frequent midnight debit card cash-outs."
+      },
+      {
+        "rank": 3,
+        "locationName": "Bank of Baroda E-Lobby - Sector 16 Metro",
+        "bank": "Bank of Baroda",
+        "address": "Sector 16 Metro Station Concourse, Noida, UP 201301",
+        "lat": 28.5784,
+        "lng": 77.3175,
+        "confidence": 56,
+        "riskLevel": "LOW",
+        "window": "Next 4 - 6 hours",
+        "historicalWithdrawals": 4,
+        "nearestUnit": "Metro Station CISF / Police Security Post (0.2 km away)",
+        "rationale": "Transit escape route ATM hub frequently utilized during high alert surveillance."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9041",
+      "unit": "UP Cyber Police QRT - Noida Sector 20",
+      "officer": "Insp. Rajesh K. Verma",
+      "dispatchChannel": "I4C Secure Encrypted Mobile Gateway",
+      "timestamp": "2026-09-08 19:40 IST",
+      "interceptStatus": "Pending"
+    }
+  },
+  {
+    "id": "CMP-2026-8942",
+    "firNumber": "FIR/CYB/2026/0843",
+    "timestamp": "2026-09-08T17:15:00Z",
+    "victim": {
+      "name": "Dr. Farhan Merchant",
+      "phone": "+91 98201 XXXXX",
+      "city": "Mumbai, MH",
+      "bank": "Axis Bank",
+      "accountNumber": "91802XXXX4512",
+      "ifsc": "UTIB0000005"
+    },
+    "amount": 1250000,
+    "fraudType": "Cryptocurrency Investment Ponzi",
+    "priority": "CRITICAL",
+    "status": "Under Investigation",
+    "reportedStation": "BKC Cyber Police Station, Mumbai",
+    "summary": "Victim lured into fictitious institutional crypto arbitrage platform with fake high-yield portfolio dashboards, money drained to multiple mule wallets.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "Valid clearing route via Axis Fort Branch", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "Linked to Telegram syndicate group 'Apex Trades India'", "badge": "Flagged" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Current account registered to fictitious export house in Kurla", "badge": "Critical Alert" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "IP address proxy matched to Bandra West cell tower", "badge": "Success" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Dr. Merchant (Victim)", "role": "Victim Source", "bank": "Axis Bank", "acc": "XXXX-4512", "risk": 4, "city": "Mumbai BKC" },
+        { "id": "M1", "label": "Zubair Corp (Mule L1)", "role": "Layer 1 Mule", "bank": "Yes Bank", "acc": "XXXX-1180", "risk": 82, "city": "Kurla West" },
+        { "id": "M2", "label": "Apex Bullion (Mule L2)", "role": "Layer 2 Mule", "bank": "Kotak Bank", "acc": "XXXX-7714", "risk": 88, "city": "Bandra West" },
+        { "id": "M3", "label": "Skyline Logistics (Mule L3)", "role": "Layer 3 Aggregator", "bank": "HDFC Bank", "acc": "XXXX-2201", "risk": 94, "city": "Santacruz" },
+        { "id": "M4", "label": "Cash Withdrawal Point", "role": "Physical Cash Extraction", "bank": "ATM Network", "acc": "Debit Cards", "risk": 99, "city": "Bandra" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 1250000, "time": "17:18:00", "type": "RTGS", "txId": "RTGS-991201" },
+        { "source": "M1", "target": "M2", "amount": 750000, "time": "17:34:10", "type": "NEFT", "txId": "NEFT-440129" },
+        { "source": "M1", "target": "M3", "amount": 480000, "time": "17:41:00", "type": "IMPS", "txId": "IMPS-882190" },
+        { "source": "M2", "target": "M4", "amount": 500000, "time": "18:10:00", "type": "Scheduled Cash-Out", "txId": "WITHDRAWAL-MUM-01" },
+        { "source": "M3", "target": "M4", "amount": 400000, "time": "18:15:00", "type": "Scheduled Cash-Out", "txId": "WITHDRAWAL-MUM-02" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "HDFC Bank ATM & Cash Deposit - Linking Road",
+        "bank": "HDFC Bank",
+        "address": "Linking Road, Bandra West, Mumbai, MH 400050",
+        "lat": 19.0596,
+        "lng": 72.8295,
+        "confidence": 92,
+        "riskLevel": "HIGH",
+        "window": "Next 1 - 3 hours",
+        "historicalWithdrawals": 24,
+        "nearestUnit": "Bandra Police Station Cyber Squad (600m away)",
+        "rationale": "High-frequency withdrawal node for western Mumbai crypto cash-out runners."
+      },
+      {
+        "rank": 2,
+        "locationName": "ICICI Bank ATM - Hill Road Branch",
+        "bank": "ICICI Bank",
+        "address": "Hill Road, Near Bandra Station, Mumbai, MH 400050",
+        "lat": 19.0544,
+        "lng": 72.8341,
+        "confidence": 76,
+        "riskLevel": "MEDIUM",
+        "window": "Next 2 - 4 hours",
+        "historicalWithdrawals": 12,
+        "nearestUnit": "Khar Mobile Intercept Patrol (1.1 km away)",
+        "rationale": "Busy transit hub allowing quick dispersal into local suburban trains."
+      },
+      {
+        "rank": 3,
+        "locationName": "Kotak Mahindra ATM - BKC G Block",
+        "bank": "Kotak Mahindra",
+        "address": "G Block, Bandra Kurla Complex, Mumbai, MH 400051",
+        "lat": 19.0662,
+        "lng": 72.8688,
+        "confidence": 58,
+        "riskLevel": "LOW",
+        "window": "Next 4 - 6 hours",
+        "historicalWithdrawals": 6,
+        "nearestUnit": "BKC Cyber Unit HQ (400m away)",
+        "rationale": "Alternate fallback vestibule with lower night-time foot traffic."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9042",
+      "unit": "Mumbai Cyber Police Special Task Force (Bandra)",
+      "officer": "ACP Pradeep Sawant",
+      "dispatchChannel": "Maharashtra Police CCTNS Emergency Broadcast",
+      "timestamp": "2026-09-08 18:25 IST",
+      "interceptStatus": "Under Watch"
+    }
+  },
+  {
+    "id": "CMP-2026-8943",
+    "firNumber": "FIR/CYB/2026/0844",
+    "timestamp": "2026-09-08T16:20:00Z",
+    "victim": {
+      "name": "Karthik Subramanian",
+      "phone": "+91 94480 XXXXX",
+      "city": "Bengaluru, KA",
+      "bank": "State Bank of India",
+      "accountNumber": "30981XXXX9901",
+      "ifsc": "SBIN0000813"
+    },
+    "amount": 320000,
+    "fraudType": "Part-time Job / YouTube Task Ponzi",
+    "priority": "HIGH",
+    "status": "Alert Dispatched",
+    "reportedStation": "CID Cyber Crime Division, Carlton House, Bengaluru",
+    "summary": "Victim paid for fake Google reviews task, promised 40% returns, coerced into tiered security deposits that were immediately layered.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "SBI Bengaluru Main clearing valid", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "3 linked complaints detected under same WhatsApp business number", "badge": "Critical Alert" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Savings account opened under Pradhan Mantri Jan Dhan Yojana (dormant mule)", "badge": "Flagged" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "Device IP located in South Bengaluru / Hosur border", "badge": "Success" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Karthik S. (Victim)", "role": "Victim Source", "bank": "SBI", "acc": "XXXX-9901", "risk": 3, "city": "Bengaluru" },
+        { "id": "M1", "label": "Manjunath R. (Mule L1)", "role": "Layer 1 Mule", "bank": "Federal Bank", "acc": "XXXX-4491", "risk": 78, "city": "Koramangala" },
+        { "id": "M2", "label": "Sri Sai Enterprises (Mule L2)", "role": "Layer 2 Mule", "bank": "Union Bank", "acc": "XXXX-6612", "risk": 89, "city": "BTM Layout" },
+        { "id": "M3", "label": "Withdrawal Mule Agent", "role": "Target Outflow", "bank": "Multi-Bank ATM", "acc": "ATM Withdrawal", "risk": 96, "city": "Koramangala" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 320000, "time": "16:24:00", "type": "UPI", "txId": "UPI-881920" },
+        { "source": "M1", "target": "M2", "amount": 295000, "time": "16:38:20", "type": "IMPS", "txId": "IMPS-550192" },
+        { "source": "M2", "target": "M3", "amount": 250000, "time": "16:50:00", "type": "ATM Withdrawal", "txId": "ATM-TXN-BLR" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "Canara Bank E-Lounge - Koramangala 5th Block",
+        "bank": "Canara Bank",
+        "address": "80 Feet Road, 5th Block, Koramangala, Bengaluru, KA 560095",
+        "lat": 12.9352,
+        "lng": 77.6245,
+        "confidence": 87,
+        "riskLevel": "HIGH",
+        "window": "Next 1 - 2 hours",
+        "historicalWithdrawals": 19,
+        "nearestUnit": "Koramangala Cyber Beat Unit 2 (450m away)",
+        "rationale": "Pinpointed by SIM triangulation of mule recipient card and previous job-scam withdrawals."
+      },
+      {
+        "rank": 2,
+        "locationName": "Axis Bank ATM - Sony World Signal",
+        "bank": "Axis Bank",
+        "address": "100 Feet Road, Koramangala 4th Block, Bengaluru, KA 560034",
+        "lat": 12.9378,
+        "lng": 77.6288,
+        "confidence": 71,
+        "riskLevel": "MEDIUM",
+        "window": "Next 2 - 4 hours",
+        "historicalWithdrawals": 11,
+        "nearestUnit": "Madiwala Traffic & Police Intercept (800m away)",
+        "rationale": "High-density retail node with unmonitored ATM blind spots."
+      },
+      {
+        "rank": 3,
+        "locationName": "SBI ATM - BTM 2nd Stage Ring Road",
+        "bank": "State Bank of India",
+        "address": "Outer Ring Road, BTM 2nd Stage, Bengaluru, KA 560076",
+        "lat": 12.9165,
+        "lng": 77.6101,
+        "confidence": 52,
+        "riskLevel": "LOW",
+        "window": "Next 3 - 5 hours",
+        "historicalWithdrawals": 5,
+        "nearestUnit": "BTM Cyber Control Desk (1.4 km away)",
+        "rationale": "Alternate escape vector towards Silk Board junction."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9043",
+      "unit": "Karnataka CID Cyber Wing - Quick Response Unit 4",
+      "officer": "DySP Ananya Hegde",
+      "dispatchChannel": "Bengaluru Police Suraksha Digital Channel",
+      "timestamp": "2026-09-08 17:05 IST",
+      "interceptStatus": "Pending"
+    }
+  },
+  {
+    "id": "CMP-2026-8944",
+    "firNumber": "FIR/CYB/2026/0845",
+    "timestamp": "2026-09-08T15:40:00Z",
+    "victim": {
+      "name": "Venkat Reddy",
+      "phone": "+91 99890 XXXXX",
+      "city": "Hyderabad, TS",
+      "bank": "ICICI Bank",
+      "accountNumber": "00480XXXX1982",
+      "ifsc": "ICIC0000048"
+    },
+    "amount": 640000,
+    "fraudType": "Electricity Bill Phishing / Fake APK",
+    "priority": "HIGH",
+    "status": "Intercepted",
+    "reportedStation": "Cyberabad Cyber Crime Police Station, Gachibowli",
+    "summary": "Victim received SMS warning of imminent power cutoff, downloaded rogue APK giving remote access to net banking credentials.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "ICICI Begumpet branch cleared", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "Malicious APK package com.tneb.quickbill identified", "badge": "Flagged" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Mule account KYC submitted via forged Aadhaar card", "badge": "Critical Alert" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "Active SIM pinged near HITEC City Cyber Towers", "badge": "Success" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Venkat R. (Victim)", "role": "Victim Source", "bank": "ICICI Bank", "acc": "XXXX-1982", "risk": 4, "city": "Hyderabad" },
+        { "id": "M1", "label": "Naresh G. (Mule L1)", "role": "Layer 1 Mule", "bank": "Punjab National Bank", "acc": "XXXX-8219", "risk": 84, "city": "Kukatpally" },
+        { "id": "M2", "label": "Deccan Agencies (Mule L2)", "role": "Layer 2 Mule", "bank": "IDBI Bank", "acc": "XXXX-3190", "risk": 93, "city": "Madhapur" },
+        { "id": "M3", "label": "Cash Courier Node", "role": "Target Outflow", "bank": "HDFC ATM", "acc": "Cash Card Extracted", "risk": 99, "city": "HITEC City" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 640000, "time": "15:43:00", "type": "IMPS", "txId": "IMPS-771829" },
+        { "source": "M1", "target": "M2", "amount": 580000, "time": "15:58:10", "type": "NEFT", "txId": "NEFT-991823" },
+        { "source": "M2", "target": "M3", "amount": 500000, "time": "16:15:00", "type": "Cash Card Withdrawal", "txId": "ATM-HYD-041" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "HDFC Bank ATM - Cyber Towers Junction",
+        "bank": "HDFC Bank",
+        "address": "HITEC City Main Road, Madhapur, Hyderabad, TS 500081",
+        "lat": 17.4483,
+        "lng": 78.3748,
+        "confidence": 94,
+        "riskLevel": "HIGH",
+        "window": "Completed / Intercepted",
+        "historicalWithdrawals": 28,
+        "nearestUnit": "Madhapur Cyberabad QRT Patrol (200m away)",
+        "rationale": "High-risk extraction corridor identified by predictive geofence model."
+      },
+      {
+        "rank": 2,
+        "locationName": "State Bank of India ATM - Inorbit Mall Rd",
+        "bank": "State Bank of India",
+        "address": "Inorbit Mall Road, Mindspace, Hyderabad, TS 500081",
+        "lat": 17.4345,
+        "lng": 78.3867,
+        "confidence": 68,
+        "riskLevel": "MEDIUM",
+        "window": "Next 2 - 3 hours",
+        "historicalWithdrawals": 14,
+        "nearestUnit": "Durgam Cheruvu Beat Constable (500m away)",
+        "rationale": "Dense corporate perimeter with heavy footfall."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9044",
+      "unit": "Cyberabad Police Commissionerate QRT Team 1",
+      "officer": "Insp. V. Srinivas",
+      "dispatchChannel": "Telangana Police Dial 100 Command Link",
+      "timestamp": "2026-09-08 16:20 IST",
+      "interceptStatus": "Intercepted"
+    }
+  },
+  {
+    "id": "CMP-2026-8945",
+    "firNumber": "FIR/CYB/2026/0846",
+    "timestamp": "2026-09-08T14:10:00Z",
+    "victim": {
+      "name": "Debashis Banerjee",
+      "phone": "+91 98310 XXXXX",
+      "city": "Kolkata, WB",
+      "bank": "Punjab National Bank",
+      "accountNumber": "01290XXXX3341",
+      "ifsc": "PUNB0012900"
+    },
+    "amount": 275000,
+    "fraudType": "Loan App Extortion / Morphing Harassment",
+    "priority": "MEDIUM",
+    "status": "Pending Analysis",
+    "reportedStation": "Lalbazar Cyber Police Station, Kolkata",
+    "summary": "Victim borrowed ₹5000 on instant loan app; syndicate morphed victim contacts and demanded repeated payments under threat of public defamation.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "PNB College Street branch verified", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "Loan app linked to rogue server hosted in Southeast Asia", "badge": "Critical Alert" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Receiver account in Salt Lake opened using compromised student documents", "badge": "Flagged" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "Device ping mapped to Sector V Salt Lake corridor", "badge": "Success" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Debashis B. (Victim)", "role": "Victim Source", "bank": "PNB", "acc": "XXXX-3341", "risk": 2, "city": "Kolkata" },
+        { "id": "M1", "label": "Subhojit D. (Mule L1)", "role": "Layer 1 Mule", "bank": "Bandhan Bank", "acc": "XXXX-8109", "risk": 72, "city": "Salt Lake Sec 1" },
+        { "id": "M2", "label": "Eastern Fin Trade (Mule L2)", "role": "Layer 2 Mule", "bank": "UCO Bank", "acc": "XXXX-9941", "risk": 86, "city": "Sector V" },
+        { "id": "M3", "label": "Cash-Out Terminal", "role": "Target Outflow", "bank": "ATM Vestibule", "acc": "ATM", "risk": 95, "city": "Salt Lake" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 275000, "time": "14:15:00", "type": "UPI", "txId": "UPI-KOL-8910" },
+        { "source": "M1", "target": "M2", "amount": 250000, "time": "14:28:40", "type": "IMPS", "txId": "IMPS-KOL-1192" },
+        { "source": "M2", "target": "M3", "amount": 200000, "time": "14:45:00", "type": "Scheduled Withdrawal", "txId": "PENDING-KOL" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "UCO Bank ATM - Sector V Karunamoyee",
+        "bank": "UCO Bank",
+        "address": "Karunamoyee Housing Complex, Salt Lake Sector V, Kolkata, WB 700091",
+        "lat": 22.5867,
+        "lng": 88.4178,
+        "confidence": 84,
+        "riskLevel": "HIGH",
+        "window": "Next 2 - 3 hours",
+        "historicalWithdrawals": 13,
+        "nearestUnit": "Bidhannagar Cyber Crime Cell QRT (700m away)",
+        "rationale": "Primary cash withdrawal hub matching Mule L2 operational hours and IP coordinates."
+      },
+      {
+        "rank": 2,
+        "locationName": "State Bank of India ATM - College More",
+        "bank": "State Bank of India",
+        "address": "College More, EP Block, Salt Lake Sector V, Kolkata, WB 700091",
+        "lat": 22.5735,
+        "lng": 88.4331,
+        "confidence": 69,
+        "riskLevel": "MEDIUM",
+        "window": "Next 3 - 5 hours",
+        "historicalWithdrawals": 8,
+        "nearestUnit": "Sector V Police Outpost (300m away)",
+        "rationale": "Secondary high footfall IT hub ATM."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9045",
+      "unit": "Bidhannagar Police Commissionerate Cyber Cell",
+      "officer": "Insp. Sourav Mukherjee",
+      "dispatchChannel": "West Bengal Police Cyber Command Net",
+      "timestamp": "2026-09-08 14:55 IST",
+      "interceptStatus": "Pending"
+    }
+  },
+  {
+    "id": "CMP-2026-8946",
+    "firNumber": "FIR/CYB/2026/0847",
+    "timestamp": "2026-09-08T13:30:00Z",
+    "victim": {
+      "name": "Pooja Choudhary",
+      "phone": "+91 94140 XXXXX",
+      "city": "Jaipur, RJ",
+      "bank": "Bank of Baroda",
+      "accountNumber": "21980XXXX5512",
+      "ifsc": "BARB0MALVIA"
+    },
+    "amount": 195000,
+    "fraudType": "KYC Update Phishing Link",
+    "priority": "MEDIUM",
+    "status": "Under Investigation",
+    "reportedStation": "Cyber Police Station, Jaipur Commissionerate",
+    "summary": "Victim received SMS claiming PAN card deactivation, submitted net banking credentials on replica Bank of Baroda portal.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "BOB Malviya Nagar branch confirmed", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "Phishing domain 'update-pankyc-bob.net' taken down by CERT-In", "badge": "Success" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Beneficiary account opened in Sanganer under fake identity", "badge": "Flagged" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "Tower triangulation points to Malviya Nagar / Tonk Road", "badge": "Critical Alert" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Pooja C. (Victim)", "role": "Victim Source", "bank": "BOB", "acc": "XXXX-5512", "risk": 1, "city": "Jaipur" },
+        { "id": "M1", "label": "Vikram S. (Mule L1)", "role": "Layer 1 Mule", "bank": "AU Small Finance Bank", "acc": "XXXX-6601", "risk": 75, "city": "Sanganer" },
+        { "id": "M2", "label": "Marwar Logistics (Mule L2)", "role": "Layer 2 Mule", "bank": "SBI", "acc": "XXXX-2244", "risk": 87, "city": "Malviya Nagar" },
+        { "id": "M3", "label": "Extraction ATM", "role": "Target Outflow", "bank": "ATM Point", "acc": "ATM", "risk": 94, "city": "Jaipur" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 195000, "time": "13:34:00", "type": "IMPS", "txId": "IMPS-JPR-9921" },
+        { "source": "M1", "target": "M2", "amount": 180000, "time": "13:48:10", "type": "NEFT", "txId": "NEFT-JPR-3310" },
+        { "source": "M2", "target": "M3", "amount": 150000, "time": "14:02:00", "type": "ATM Withdrawal", "txId": "ATM-JPR-881" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "AU Small Finance Bank ATM - Malviya Nagar",
+        "bank": "AU Small Finance Bank",
+        "address": "Calgiri Marg, Malviya Nagar, Jaipur, RJ 302017",
+        "lat": 26.8532,
+        "lng": 75.8166,
+        "confidence": 86,
+        "riskLevel": "HIGH",
+        "window": "Next 1 - 3 hours",
+        "historicalWithdrawals": 15,
+        "nearestUnit": "Malviya Nagar Police Station Mobile Patrol (500m away)",
+        "rationale": "Direct account issuer ATM, mule known to utilize immediate cardless ATM withdrawals."
+      },
+      {
+        "rank": 2,
+        "locationName": "State Bank of India ATM - Gaurav Tower",
+        "bank": "State Bank of India",
+        "address": "Gaurav Tower Complex, Malviya Nagar, Jaipur, RJ 302017",
+        "lat": 26.8558,
+        "lng": 75.8115,
+        "confidence": 66,
+        "riskLevel": "MEDIUM",
+        "window": "Next 2 - 4 hours",
+        "historicalWithdrawals": 7,
+        "nearestUnit": "Gaurav Tower Beat Post (100m away)",
+        "rationale": "High-traffic commercial hub providing anonymity."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9046",
+      "unit": "Jaipur Cyber Police Commissionerate Strike Team",
+      "officer": "Insp. Rakesh Sharma",
+      "dispatchChannel": "Rajasthan Cyber Shield Alert System",
+      "timestamp": "2026-09-08 14:15 IST",
+      "interceptStatus": "Under Watch"
+    }
+  },
+  {
+    "id": "CMP-2026-8947",
+    "firNumber": "FIR/CYB/2026/0848",
+    "timestamp": "2026-09-08T12:00:00Z",
+    "victim": {
+      "name": "Alok Kumar Saxena",
+      "phone": "+91 94150 XXXXX",
+      "city": "Lucknow, UP",
+      "bank": "Bank of India",
+      "accountNumber": "60210XXXX4981",
+      "ifsc": "BKID0006021"
+    },
+    "amount": 890000,
+    "fraudType": "Digital Arrest / Customs Parcel Scam",
+    "priority": "CRITICAL",
+    "status": "Alert Dispatched",
+    "reportedStation": "UP Cyber Police Headquarters, Signature Building, Lucknow",
+    "summary": "Victim told parcel containing contraband stopped at customs, coerced into RTGS transfer to fake RBI verified escrow account.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "BOI Hazratganj branch verified", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "Fake customs notice stamped with forged DGFT insignia", "badge": "Flagged" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Mule current account opened under shell advisory company", "badge": "Critical Alert" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "Active SIM coordinates tracked to Hazratganj commercial corridor", "badge": "Success" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Alok S. (Victim)", "role": "Victim Source", "bank": "BOI", "acc": "XXXX-4981", "risk": 3, "city": "Lucknow" },
+        { "id": "M1", "label": "Gaurav Enterprises (Mule L1)", "role": "Layer 1 Mule", "bank": "Axis Bank", "acc": "XXXX-4910", "risk": 79, "city": "Hazratganj" },
+        { "id": "M2", "label": "Avadh Trading Co (Mule L2)", "role": "Layer 2 Mule", "bank": "HDFC Bank", "acc": "XXXX-7711", "risk": 90, "city": "Gomti Nagar" },
+        { "id": "M3", "label": "Cash Out Runner", "role": "Target Outflow", "bank": "Bank ATM", "acc": "ATM", "risk": 97, "city": "Hazratganj" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 890000, "time": "12:08:00", "type": "RTGS", "txId": "RTGS-LKO-901" },
+        { "source": "M1", "target": "M2", "amount": 820000, "time": "12:24:10", "type": "IMPS", "txId": "IMPS-LKO-442" },
+        { "source": "M2", "target": "M3", "amount": 750000, "time": "12:45:00", "type": "ATM Pull Scheduled", "txId": "ATM-LKO-882" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "State Bank of India ATM & CDM - Hazratganj Main",
+        "bank": "State Bank of India",
+        "address": "Mahatma Gandhi Marg, Hazratganj, Lucknow, UP 226001",
+        "lat": 26.8500,
+        "lng": 80.9499,
+        "confidence": 91,
+        "riskLevel": "HIGH",
+        "window": "Next 1 - 2 hours",
+        "historicalWithdrawals": 21,
+        "nearestUnit": "Hazratganj Cyber Mobile Intervention Unit (350m away)",
+        "rationale": "High cash-volume CDM vestibule frequently targeted by UP customs syndicate runners."
+      },
+      {
+        "rank": 2,
+        "locationName": "HDFC Bank ATM - Kapoorthala Aliganj",
+        "bank": "HDFC Bank",
+        "address": "Kapoorthala Commercial Complex, Aliganj, Lucknow, UP 226024",
+        "lat": 26.8851,
+        "lng": 80.9422,
+        "confidence": 64,
+        "riskLevel": "MEDIUM",
+        "window": "Next 2 - 4 hours",
+        "historicalWithdrawals": 8,
+        "nearestUnit": "Aliganj Cyber Beat Desk (600m away)",
+        "rationale": "Secondary extraction point in North Lucknow."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9047",
+      "unit": "UP State Cyber Police Headquarters QRT",
+      "officer": "SP Cyber Crime Amit Pathak",
+      "dispatchChannel": "UP 112 Rapid Tactical Dispatch",
+      "timestamp": "2026-09-08 12:55 IST",
+      "interceptStatus": "Pending"
+    }
+  },
+  {
+    "id": "CMP-2026-8948",
+    "firNumber": "FIR/CYB/2026/0849",
+    "timestamp": "2026-09-08T10:15:00Z",
+    "victim": {
+      "name": "Bhavik Patel",
+      "phone": "+91 98250 XXXXX",
+      "city": "Ahmedabad, GJ",
+      "bank": "Kotak Mahindra Bank",
+      "accountNumber": "44910XXXX8821",
+      "ifsc": "KKBK0000812"
+    },
+    "amount": 540000,
+    "fraudType": "SIM Swap & Net Banking Takeover",
+    "priority": "HIGH",
+    "status": "Intercepted",
+    "reportedStation": "Cyber Crime Police Station, Crime Branch, Ahmedabad",
+    "summary": "Fraudsters engineered fraudulent eSIM swap via forged telecom portal request, intercepted 2FA OTPs, drained bank accounts.",
+    "cleaningAudit": [
+      { "id": "C1", "name": "IFSC Routing & Branch Verification", "status": "VERIFIED", "detail": "Kotak CG Road branch confirmed", "badge": "Success" },
+      { "id": "C2", "name": "NCRP Multi-Portal Deduplication", "status": "CLEARED", "detail": "SIM swap request logged at 04:12 AM without biometric verification", "badge": "Critical Alert" },
+      { "id": "C3", "name": "Beneficiary Entity Normalization", "status": "RESOLVED", "detail": "Account registered to fabricated diamond brokerage account", "badge": "Flagged" },
+      { "id": "C4", "name": "Cellular Tower Geolocation Check", "status": "CROSS-MATCHED", "detail": "Active cell tower localized to CG Road / Navrangpura", "badge": "Success" }
+    ],
+    "muleChain": {
+      "nodes": [
+        { "id": "V0", "label": "Bhavik P. (Victim)", "role": "Victim Source", "bank": "Kotak", "acc": "XXXX-8821", "risk": 2, "city": "Ahmedabad" },
+        { "id": "M1", "label": "Riddhi Gems (Mule L1)", "role": "Layer 1 Mule", "bank": "Axis Bank", "acc": "XXXX-9912", "risk": 81, "city": "Navrangpura" },
+        { "id": "M2", "label": "Karnavati Bullion (Mule L2)", "role": "Layer 2 Mule", "bank": "ICICI Bank", "acc": "XXXX-3199", "risk": 92, "city": "CG Road" },
+        { "id": "M3", "label": "Withdrawal Mule", "role": "Target Outflow", "bank": "ATM", "acc": "ATM", "risk": 98, "city": "Ahmedabad" }
+      ],
+      "links": [
+        { "source": "V0", "target": "M1", "amount": 540000, "time": "10:19:00", "type": "NEFT", "txId": "NEFT-AHM-101" },
+        { "source": "M1", "target": "M2", "amount": 490000, "time": "10:32:15", "type": "IMPS", "txId": "IMPS-AHM-552" },
+        { "source": "M2", "target": "M3", "amount": 450000, "time": "10:50:00", "type": "Cardless ATM Withdrawal", "txId": "ATM-AHM-991" }
+      ]
+    },
+    "predictions": [
+      {
+        "rank": 1,
+        "locationName": "ICICI Bank ATM - CG Road Swastik Cross",
+        "bank": "ICICI Bank",
+        "address": "Swastik Cross Road, CG Road, Navrangpura, Ahmedabad, GJ 380009",
+        "lat": 23.0338,
+        "lng": 72.5574,
+        "confidence": 95,
+        "riskLevel": "HIGH",
+        "window": "Completed / Intercepted",
+        "historicalWithdrawals": 26,
+        "nearestUnit": "Navrangpura Police Station QRT (250m away)",
+        "rationale": "High-velocity financial cash-out node. Suspect intercepted on-site."
+      },
+      {
+        "rank": 2,
+        "locationName": "Axis Bank ATM - Law Garden",
+        "bank": "Axis Bank",
+        "address": "Near Law Garden, Ellisbridge, Ahmedabad, GJ 380006",
+        "lat": 23.0245,
+        "lng": 72.5591,
+        "confidence": 70,
+        "riskLevel": "MEDIUM",
+        "window": "Next 2 - 4 hours",
+        "historicalWithdrawals": 10,
+        "nearestUnit": "Ellisbridge Beat Van 2 (500m away)",
+        "rationale": "Secondary escape route vestibule."
+      }
+    ],
+    "alert": {
+      "alertId": "ALT-2026-9048",
+      "unit": "Ahmedabad Cyber Crime Cell Strike Force",
+      "officer": "ACP Hardik Dave",
+      "dispatchChannel": "Gujarat Police Vishesh Command Net",
+      "timestamp": "2026-09-08 10:55 IST",
+      "interceptStatus": "Intercepted"
+    }
+  }
+]
