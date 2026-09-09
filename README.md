@@ -84,11 +84,6 @@ When financial cyber fraud occurs, fraudsters rapidly disperse siphoned money ac
    npm run dev
    ```
 
-4. **Access the portal**:
-   - **Frontend Console**: [http://localhost:5173](http://localhost:5173)
-   - **Backend API**: [http://localhost:5001/api/health](http://localhost:5001/api/health)
-
----
 
 ## 📊 Mock Data Schema
 
