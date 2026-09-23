@@ -1,0 +1,263 @@
+{
+  "ring_19": {
+    "account": {
+      "bank": "SBI",
+      "acc": "44718XXXX3287",
+      "ifsc": "SBI0358607",
+      "city": "Ahmedabad, GJ"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9001",
+      "CMP-2026-SYN9003",
+      "CMP-2026-SYN9076"
+    ]
+  },
+  "ring_3": {
+    "account": {
+      "bank": "IDBI Bank",
+      "acc": "88907XXXX1434",
+      "ifsc": "IDBI0688508",
+      "city": "Hyderabad, TS"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9004",
+      "CMP-2026-SYN9030",
+      "CMP-2026-SYN9043",
+      "CMP-2026-SYN9055",
+      "CMP-2026-SYN9108"
+    ]
+  },
+  "ring_2": {
+    "account": {
+      "bank": "HDFC Bank",
+      "acc": "13905XXXX2535",
+      "ifsc": "HDFC0329258",
+      "city": "Lucknow, UP"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9006",
+      "CMP-2026-SYN9031",
+      "CMP-2026-SYN9038",
+      "CMP-2026-SYN9066",
+      "CMP-2026-SYN9101",
+      "CMP-2026-SYN9106"
+    ]
+  },
+  "ring_14": {
+    "account": {
+      "bank": "SBI",
+      "acc": "80010XXXX5010",
+      "ifsc": "SBI0271339",
+      "city": "Mumbai, MH"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9007",
+      "CMP-2026-SYN9049",
+      "CMP-2026-SYN9110"
+    ]
+  },
+  "ring_4": {
+    "account": {
+      "bank": "IDBI Bank",
+      "acc": "64987XXXX4611",
+      "ifsc": "IDBI0571029",
+      "city": "Hyderabad, TS"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9009",
+      "CMP-2026-SYN9019",
+      "CMP-2026-SYN9020",
+      "CMP-2026-SYN9034",
+      "CMP-2026-SYN9045",
+      "CMP-2026-SYN9047",
+      "CMP-2026-SYN9050",
+      "CMP-2026-SYN9081"
+    ]
+  },
+  "ring_16": {
+    "account": {
+      "bank": "HDFC Bank",
+      "acc": "40021XXXX1525",
+      "ifsc": "HDFC0944151",
+      "city": "Jaipur, RJ"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9013",
+      "CMP-2026-SYN9027",
+      "CMP-2026-SYN9097",
+      "CMP-2026-SYN9116"
+    ]
+  },
+  "ring_11": {
+    "account": {
+      "bank": "Punjab National Bank",
+      "acc": "20458XXXX4814",
+      "ifsc": "PNB0205907",
+      "city": "Hyderabad, TS"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9015",
+      "CMP-2026-SYN9051"
+    ]
+  },
+  "ring_18": {
+    "account": {
+      "bank": "Canara Bank",
+      "acc": "95909XXXX9179",
+      "ifsc": "CB0514850",
+      "city": "Jaipur, RJ"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9018",
+      "CMP-2026-SYN9046",
+      "CMP-2026-SYN9053",
+      "CMP-2026-SYN9067",
+      "CMP-2026-SYN9073",
+      "CMP-2026-SYN9088",
+      "CMP-2026-SYN9089",
+      "CMP-2026-SYN9092"
+    ]
+  },
+  "ring_5": {
+    "account": {
+      "bank": "HDFC Bank",
+      "acc": "30926XXXX7924",
+      "ifsc": "HDFC0456778",
+      "city": "Kolkata, WB"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9023",
+      "CMP-2026-SYN9063"
+    ]
+  },
+  "ring_17": {
+    "account": {
+      "bank": "Bank of Baroda",
+      "acc": "45093XXXX2084",
+      "ifsc": "BB0321231",
+      "city": "Jaipur, RJ"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9025",
+      "CMP-2026-SYN9103",
+      "CMP-2026-SYN9105",
+      "CMP-2026-SYN9111"
+    ]
+  },
+  "ring_7": {
+    "account": {
+      "bank": "Bank of Baroda",
+      "acc": "22676XXXX6881",
+      "ifsc": "BB0988662",
+      "city": "Mumbai, MH"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9026",
+      "CMP-2026-SYN9059",
+      "CMP-2026-SYN9074",
+      "CMP-2026-SYN9109"
+    ]
+  },
+  "ring_9": {
+    "account": {
+      "bank": "Bank of Baroda",
+      "acc": "20328XXXX5803",
+      "ifsc": "BB0969693",
+      "city": "Mumbai, MH"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9028",
+      "CMP-2026-SYN9029",
+      "CMP-2026-SYN9032",
+      "CMP-2026-SYN9036",
+      "CMP-2026-SYN9079"
+    ]
+  },
+  "ring_0": {
+    "account": {
+      "bank": "HDFC Bank",
+      "acc": "46048XXXX5012",
+      "ifsc": "HDFC0334053",
+      "city": "Mumbai, MH"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9033",
+      "CMP-2026-SYN9052",
+      "CMP-2026-SYN9115"
+    ]
+  },
+  "ring_1": {
+    "account": {
+      "bank": "ICICI Bank",
+      "acc": "98696XXXX9935",
+      "ifsc": "ICIC0191161",
+      "city": "Bengaluru, KA"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9062",
+      "CMP-2026-SYN9117"
+    ]
+  },
+  "ring_8": {
+    "account": {
+      "bank": "Punjab National Bank",
+      "acc": "15695XXXX8527",
+      "ifsc": "PNB0662275",
+      "city": "Jaipur, RJ"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9068",
+      "CMP-2026-SYN9102"
+    ]
+  },
+  "ring_15": {
+    "account": {
+      "bank": "Bank of Baroda",
+      "acc": "45382XXXX4598",
+      "ifsc": "BB0817870",
+      "city": "Ahmedabad, GJ"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9069",
+      "CMP-2026-SYN9075",
+      "CMP-2026-SYN9090"
+    ]
+  },
+  "ring_12": {
+    "account": {
+      "bank": "Punjab National Bank",
+      "acc": "69429XXXX6977",
+      "ifsc": "PNB0270555",
+      "city": "Lucknow, UP"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9071",
+      "CMP-2026-SYN9072"
+    ]
+  },
+  "ring_6": {
+    "account": {
+      "bank": "SBI",
+      "acc": "38221XXXX6514",
+      "ifsc": "SBI0207175",
+      "city": "Kolkata, WB"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9080",
+      "CMP-2026-SYN9082",
+      "CMP-2026-SYN9095"
+    ]
+  },
+  "ring_13": {
+    "account": {
+      "bank": "Axis Bank",
+      "acc": "37460XXXX5374",
+      "ifsc": "AB0835911",
+      "city": "Jaipur, RJ"
+    },
+    "case_ids": [
+      "CMP-2026-SYN9087",
+      "CMP-2026-SYN9099"
+    ]
+  }
+}

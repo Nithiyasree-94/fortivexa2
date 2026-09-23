@@ -1,0 +1,23 @@
+{
+  "n_cases_total": 120,
+  "n_cases_train": 90,
+  "n_cases_test": 30,
+  "classification_metrics": {
+    "precision": 0.318,
+    "recall": 0.233,
+    "f1": 0.269,
+    "roc_auc": 0.703
+  },
+  "ranking_metrics": {
+    "top1_accuracy": 0.5,
+    "top3_accuracy": 0.967,
+    "note": "top1 = model's single best-ranked ATM matched the actual cash-out location; top3 = actual location was within the model's top 3 ranked candidates"
+  },
+  "feature_importances": {
+    "distance_km_from_last_hop": 0.523,
+    "historicalWithdrawals": 0.353,
+    "hour_of_day": 0.056,
+    "last_hop_risk": 0.057,
+    "account_in_known_ring": 0.012
+  }
+}

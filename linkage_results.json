@@ -1,0 +1,922 @@
+{
+  "cases_analyzed": 120,
+  "seeded_ground_truth_rings": 19,
+  "rings_detected": 20,
+  "exact_match_rings": 17,
+  "ring_recall": 0.895,
+  "ring_precision": 0.85,
+  "false_positive_rings": 3,
+  "detected_rings": [
+    {
+      "case_ids": [
+        "CMP-2026-SYN9009",
+        "CMP-2026-SYN9019",
+        "CMP-2026-SYN9020",
+        "CMP-2026-SYN9034",
+        "CMP-2026-SYN9045",
+        "CMP-2026-SYN9047",
+        "CMP-2026-SYN9050",
+        "CMP-2026-SYN9081",
+        "CMP-2026-SYN9084"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "SBI",
+          "acc": "XXXX7108"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX2914"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX6401"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX3444"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX6562"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX4611"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX2506"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX7732"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX7581"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX1841"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX4144"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX1280"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX4697"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX4893"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX6381"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX5240"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX2234"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX5989"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX8993"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX9622"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX3872"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX1530"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9018",
+        "CMP-2026-SYN9046",
+        "CMP-2026-SYN9053",
+        "CMP-2026-SYN9067",
+        "CMP-2026-SYN9073",
+        "CMP-2026-SYN9088",
+        "CMP-2026-SYN9089",
+        "CMP-2026-SYN9092"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX1959"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX2650"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX6449"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX8757"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX9261"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX7397"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX9179"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX2161"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX4349"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX2972"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX4951"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX1606"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9006",
+        "CMP-2026-SYN9031",
+        "CMP-2026-SYN9038",
+        "CMP-2026-SYN9066",
+        "CMP-2026-SYN9101",
+        "CMP-2026-SYN9106"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX8923"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX4610"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX5412"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX5314"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX4232"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX7887"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX3471"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX9019"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX2535"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX6697"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX2506"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX7997"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX1797"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX7120"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX6766"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9028",
+        "CMP-2026-SYN9029",
+        "CMP-2026-SYN9032",
+        "CMP-2026-SYN9036",
+        "CMP-2026-SYN9078",
+        "CMP-2026-SYN9079"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX9950"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX7232"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX5781"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX1801"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX5480"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX5146"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX3901"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX5803"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX6916"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX9498"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX1110"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX9540"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX9092"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX1151"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX7846"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX7719"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX5989"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9004",
+        "CMP-2026-SYN9030",
+        "CMP-2026-SYN9043",
+        "CMP-2026-SYN9055",
+        "CMP-2026-SYN9108"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "SBI",
+          "acc": "XXXX4961"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX1387"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX1434"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX8457"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX6901"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX1634"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX1406"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX8729"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX3267"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX4787"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX4618"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9013",
+        "CMP-2026-SYN9027",
+        "CMP-2026-SYN9097",
+        "CMP-2026-SYN9116"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX3344"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX5712"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX8354"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX1525"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX7997"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX1284"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX9508"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9025",
+        "CMP-2026-SYN9103",
+        "CMP-2026-SYN9105",
+        "CMP-2026-SYN9111"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX1674"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX6553"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX2084"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX9860"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX3050"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX5186"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX5489"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX3627"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX6198"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX9179"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX9314"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX3697"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9026",
+        "CMP-2026-SYN9059",
+        "CMP-2026-SYN9074",
+        "CMP-2026-SYN9109"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX1567"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX8147"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX3839"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX4943"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX1144"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX2857"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX6902"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX4624"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX6123"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX6827"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX6881"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9001",
+        "CMP-2026-SYN9003",
+        "CMP-2026-SYN9076"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "SBI",
+          "acc": "XXXX3287"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX9479"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX5002"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX6901"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX1301"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9007",
+        "CMP-2026-SYN9049",
+        "CMP-2026-SYN9110"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX4266"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX8194"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX7101"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX1853"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX7782"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX5010"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX4738"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9033",
+        "CMP-2026-SYN9052",
+        "CMP-2026-SYN9115"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX4111"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX1507"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX3456"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX2771"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX9401"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX3903"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX4921"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX5012"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9069",
+        "CMP-2026-SYN9075",
+        "CMP-2026-SYN9090"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX4377"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX8879"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX3949"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX4991"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX7387"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX9269"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX4598"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX8046"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9080",
+        "CMP-2026-SYN9082",
+        "CMP-2026-SYN9095"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX2932"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX2431"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX9608"
+        },
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX3947"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX5483"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX6915"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX6514"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9015",
+        "CMP-2026-SYN9051"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "SBI",
+          "acc": "XXXX4362"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX7102"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX4814"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX2501"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX2480"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9023",
+        "CMP-2026-SYN9063"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX8055"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX7924"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX4773"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX9399"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX6438"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9062",
+        "CMP-2026-SYN9117"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX5939"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX9935"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX3299"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX4796"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX8613"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9068",
+        "CMP-2026-SYN9102"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX8527"
+        },
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX5222"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX7914"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX5882"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9071",
+        "CMP-2026-SYN9072"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Kotak Mahindra Bank",
+          "acc": "XXXX5828"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX2466"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX6977"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX2759"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX2998"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9087",
+        "CMP-2026-SYN9099"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Axis Bank",
+          "acc": "XXXX5374"
+        },
+        {
+          "bank": "SBI",
+          "acc": "XXXX4027"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX6528"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX2060"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX9379"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX1388"
+        }
+      ]
+    },
+    {
+      "case_ids": [
+        "CMP-2026-SYN9093",
+        "CMP-2026-SYN9100"
+      ],
+      "shared_accounts": [
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX7929"
+        },
+        {
+          "bank": "ICICI Bank",
+          "acc": "XXXX8839"
+        },
+        {
+          "bank": "Punjab National Bank",
+          "acc": "XXXX9052"
+        },
+        {
+          "bank": "Canara Bank",
+          "acc": "XXXX1750"
+        },
+        {
+          "bank": "IDBI Bank",
+          "acc": "XXXX9837"
+        },
+        {
+          "bank": "Bank of Baroda",
+          "acc": "XXXX6779"
+        },
+        {
+          "bank": "HDFC Bank",
+          "acc": "XXXX7003"
+        }
+      ]
+    }
+  ]
+}
